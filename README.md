@@ -27,4 +27,4 @@ Which was split to 3 __categories__:
 - Testing 
 - Validation
 
-To check the dataset from __Kaggle__ you can visit this [link](https://www.kaggle.com/ashishjangra27/face-mask-12k-images-dataset) link.
+To check the dataset from __Kaggle__ you can visit this [link](https://www.kaggle.com/ashishjangra27/face-mask-12k-images-dataset) .
