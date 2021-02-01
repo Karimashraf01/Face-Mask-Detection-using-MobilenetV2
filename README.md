@@ -33,6 +33,8 @@ Which was split to 3 __categories__:
 - Validation
 
 To check the dataset from __Kaggle__ you can visit this [link](https://www.kaggle.com/ashishjangra27/face-mask-12k-images-dataset) .
+
+### Dataset Sample:
 <p align="center">
   <img  src="https://github.com/Karimashraf01/Face-Mask-Detection-using-MobilenetV2/blob/master/sample.jpg">
 </p>
