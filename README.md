@@ -2,7 +2,7 @@
 Face mask detection using Pretrained __MobilenetV2__ using __TensorFlow 2.3__ and __Keras API__ with help of Opencv's __haarcascade__ to help with Facial recognition before feeding the data to the model. 
 
 <p align="center">
-  <img  src="https://github.com/Karimashraf01/Face-Mask-Detection-using-MobilenetV2/blob/master/test_img.jpg">
+  <img  src="https://github.com/Karimashraf01/Face-Mask-Detection-using-MobilenetV2/blob/master/img_readme/test_img.jpg">
 </p>
 
 ## Getting Started
@@ -36,5 +36,5 @@ To check the dataset from __Kaggle__ you can visit this [link](https://www.kaggl
 
 ### Dataset Sample:
 <p align="center">
-  <img  src="https://github.com/Karimashraf01/Face-Mask-Detection-using-MobilenetV2/blob/master/sample.jpg">
+  <img  src="https://github.com/Karimashraf01/Face-Mask-Detection-using-MobilenetV2/blob/master/img_readme/sample.jpg">
 </p>
