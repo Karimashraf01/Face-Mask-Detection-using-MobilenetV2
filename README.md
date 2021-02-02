@@ -64,5 +64,29 @@ python "WebCam.py"
 ```
 ### Prediction making
 `WebCam.py` script uses opencv's __HaarCascade__ to cut the faces from the input frames from the webcam. And feeds the cropped image to the model to make a prediction and based on it a __Bounding Box__ with the prediction will be drawn on the output.
+
 To Terminate the program press __ESC__.
 
+
+### Flow Of The Image
+The frame read by the WebCam maybe like this image.
+
+#### Input Image
+<p align="center">
+  <img  src="https://github.com/Karimashraf01/Face-Mask-Detection-using-MobilenetV2/blob/master/img_readme/test2.jpg">
+</p>
+
+After this the __Haar Cascade__ crops out the faces in the image like this.
+#### Cropped Faces
+<p align="center">
+  <img  src="https://github.com/Karimashraf01/Face-Mask-Detection-using-MobilenetV2/blob/master/img_readme/test2_cropped.jpg">
+</p>
+
+Then each face is fed to the __MobileNetV2__ individually to make a predication.
+
+#### Output Image
+<p align="center">
+  <img  src="https://github.com/Karimashraf01/Face-Mask-Detection-using-MobilenetV2/blob/master/img_readme/output.jpg">
+</p>
+
+A __Bounding Box__ is drawn using the coordinates given by the __Haar Cascade__. The box indicates both predication and position of the face.
