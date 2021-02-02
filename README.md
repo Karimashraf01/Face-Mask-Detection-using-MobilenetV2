@@ -42,7 +42,7 @@ To check the dataset from __Kaggle__ you can visit this [link](https://www.kaggl
 ## Model Architecture
 The model consist of the pretrained network of __MobileNetV2__ with adding two extra layers to be trained on our data:
 - Flatten Layer 
-- Dense layer with 2 neuron; one for each class with activation function of __Softmax_ 
+- Dense layer with 2 neuron; one for each class with activation function of __Softmax__
 
 The model Takes __RGB__ images with shape of __(1,128,128,3)__ and gives out A __Vector__ of two Values. The First value indicates the confidence of the predication of wearing a mask. And the Second Value indicates the confidence of not wearing a mask.
 
