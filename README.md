@@ -40,13 +40,13 @@ To check the dataset from __Kaggle__ you can visit this [link](https://www.kaggl
 </p>
 
 ## Model Architecture
-The model consist of the pretrained network of __MobileNetV2__ and adding two layers:
+The model consist of the pretrained network of __MobileNetV2__ with adding two extra layers to be trained on our data:
 - Flatten Layer 
 - Dense layer with 2 neuron; one for each class with activation function of __Softmax_ 
 
-The model Takes __RGB__ images with shape of __(1,128,128,3)__ and gives out An vector of two Values, The First value indicates the confidence of the predication of wearing a mask. And the second Value indicates the confidence of not wearing a mask.
+The model Takes __RGB__ images with shape of __(1,128,128,3)__ and gives out A __Vector__ of two Values. The First value indicates the confidence of the predication of wearing a mask. And the Second Value indicates the confidence of not wearing a mask.
 
-Due to using __Softmax__ Function the sum of the two Values equal to one.
+Due to using __Softmax__ Function the sum of the two Values equals to one.
 ### MobileNetV2
 <p align="center">
   <img  src="https://github.com/Karimashraf01/Face-Mask-Detection-using-MobilenetV2/blob/master/img_readme/mobilenetv2.jpg">
@@ -58,25 +58,25 @@ Due to using __Softmax__ Function the sum of the two Values equal to one.
 </p>
 
 ## Running The Model using Webcam
-To run the model using __Webcam__ and highlighting the faces with a __Bounding Box__ indicating the Prediction run this command
+To run the model using __Webcam__ and highlighting the faces in the feed images with a __Bounding Box__ indicating the Prediction and the position of the face run this command
 ```
 python "WebCam.py"
 ```
 ### Prediction making
-`WebCam.py` script uses opencv's __HaarCascade__ to cut the faces from the input frames from the webcam. And feeds the cropped image to the model to make a prediction and based on it a __Bounding Box__ with the prediction will be drawn on the output.
+`WebCam.py` script uses opencv's __HaarCascade__ to crop the faces from the input frames from the webcam. And feeds the cropped image to the trained __MobileNetV2__ to make a prediction and based on it a __Bounding Box__ with the prediction will be drawn on the output.
 
-To Terminate the program press __ESC__.
+To Terminate the program after running press __ESC__.
 
 
 ### Flow Of The Image
-The frame read by the WebCam maybe like this image.
+The frame read from the WebCam maybe like this image.
 
 #### Input Image
 <p align="center">
   <img  src="https://github.com/Karimashraf01/Face-Mask-Detection-using-MobilenetV2/blob/master/img_readme/test2.jpg">
 </p>
 
-After this the __Haar Cascade__ crops out the faces in the image like this.
+later the __Haar Cascade__ crops out the faces in the image like this.
 #### Cropped Faces
 <p align="center">
   <img  src="https://github.com/Karimashraf01/Face-Mask-Detection-using-MobilenetV2/blob/master/img_readme/test2_cropped.jpg">
