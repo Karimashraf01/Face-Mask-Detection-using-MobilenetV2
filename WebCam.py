@@ -1,6 +1,9 @@
 import numpy as np
 import cv2
 from keras.models import load_model
+import time
+frames=0
+sum=0
 
 ## Prepare image to be loaded to the model
 def preprocessing(img):
@@ -29,6 +32,7 @@ model = load_model('masknet.h5')
 
 ## Opening webcam and loading the model
 while True:
+	start = time.time()
 	_ , imgOrignal=cap.read()
 	faces = facedetect.detectMultiScale(imgOrignal,1.3,5)
 	for x,y,w,h in faces:
@@ -47,6 +51,15 @@ while True:
 				cv2.rectangle(imgOrignal, (x,y-40),(x+w, y), (50,50,255),-2)
 				cv2.putText(imgOrignal,f"{str(get_className(classIndex))} {str(np.round(probabilityValue*100,2))}%",(x,y-10), font, 0.75, (255,255,255),1, cv2.LINE_AA)
 	cv2.imshow("Result",imgOrignal)
+	frames=frames+1
+	end = time.time()
+	seconds = end - start
+	sum=sum + seconds
+	if (sum >= 1):
+		fps = frames / sum
+		print (f"{round(fps)} fps")
+		frames=0
+		sum=0
 	k=cv2.waitKey(1)
 	if k==27:           ## PRESS Esc to triminate the program
 		break
