@@ -4,7 +4,6 @@ from keras.models import load_model
 import time
 frames=0
 sum=0
-
 ## Prepare image to be loaded to the model
 def preprocessing(img):
 	img=cv2.resize(img,(128,128))
