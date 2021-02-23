@@ -40,13 +40,13 @@ while True:
 		img=preprocessing(crop_img)
 		prediction=model.predict(img)
 		classIndex=model.predict_classes(img)
-		probabilityValue=np.amax(prediction) ## Talking Highest prediction
+		probabilityValue=np.amax(prediction) ## Taking Highest prediction
 		if (probabilityValue>THRESHOLD):       ## Checking Condfidence against the Threshold
 			if (classIndex==0):              ## if prediction is MASK
 				cv2.rectangle(imgOrignal,(x,y),(x+w,y+h),(0,255,0),2)
 				cv2.rectangle(imgOrignal, (x,y-40),(x+w, y), (0,255,0),-2)
 				cv2.putText(imgOrignal,f"{str(get_className(classIndex))} {str(np.round(probabilityValue*100,2))}%",(x,y-10), font, 0.75, (255,255,255),1, cv2.LINE_AA)
-			elif (classIndex==1):           ## if prediction is MASK
+			elif (classIndex==1):           ## if prediction is NOMASK
 				cv2.rectangle(imgOrignal,(x,y),(x+w,y+h),(50,50,255),2)
 				cv2.rectangle(imgOrignal, (x,y-40),(x+w, y), (50,50,255),-2)
 				cv2.putText(imgOrignal,f"{str(get_className(classIndex))} {str(np.round(probabilityValue*100,2))}%",(x,y-10), font, 0.75, (255,255,255),1, cv2.LINE_AA)
