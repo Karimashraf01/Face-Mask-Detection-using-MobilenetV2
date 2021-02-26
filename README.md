@@ -13,7 +13,7 @@ Face mask detection using Pretrained __MobilenetV2__ using __TensorFlow 2.3__ an
 - numpy
 
 ### Installing
-This command will help to install the required independenies:
+This command will help to install the required dependenies:
 ```
 pip install -r requirements.txt
 ```
